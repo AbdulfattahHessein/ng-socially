@@ -1,0 +1,16 @@
+<div class="request" *ngIf="!request.isAccepted">
+  <div class="info">
+    <div class="profile-photo">
+      <img [src]="request.userPhoto" alt="" />
+    </div>
+    <div>
+      <h5>{{ request.username }}</h5>
+      <p class="text-muted">{{ request.mutualFriendsCount }} mutual friends</p>
+    </div>
+  </div>
+  <div class="action">
+    <button class="btn btn-primary">Accept</button>
+    <button class="btn">Decline</button>
+  </div>
+</div>
+

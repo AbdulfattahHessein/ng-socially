@@ -1,0 +1,11 @@
+<div
+  class="story"
+  [style.background]="
+    'url(' + story.profilePhoto + ') no-repeat center center/cover'
+  "
+>
+  <div class="profile-photo">
+    <img [src]="story.image" alt="profile image" />
+  </div>
+  <p class="name">{{ story.username }}</p>
+</div>
