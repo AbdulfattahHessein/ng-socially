@@ -1,2 +1,31 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<!-- main section -->
+<main>
+  <div class="container">
+    <!-- Left section -->
+    <div class="left">
+      <app-sidebar></app-sidebar>
+    </div>
+    <!-- End of Left Section -->
+
+    <!-- Middle Section -->
+    <div class="middle">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- End od Middle Section -->
+
+    <!-- Right Section -->
+    <div class="right scrollable">
+      <app-message-sidebar></app-message-sidebar>
+      <div class="friend-requests">
+        <h4>Requests</h4>
+        <app-friend-request
+          *ngFor="let friendRequest of friendRequests"
+          [request]="friendRequest"
+        >
+        </app-friend-request>
+      </div>
+    </div>
+    <!-- End of Right Section -->
+  </div>
+</main>

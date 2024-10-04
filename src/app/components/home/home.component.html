@@ -1,55 +1,27 @@
-<!-- main section -->
-<main>
-  <div class="container">
-    <!-- Left section -->
-    <div class="left">
-      <app-sidebar></app-sidebar>
-    </div>
-    <!-- End of Left Section -->
-
-    <!-- Middle Section -->
-    <div class="middle">
-      <!-- Start Of Stories -->
-      <div class="stories scrollable">
-        <app-story *ngFor="let story of stories" [story]="story"></app-story>
-      </div>
-      <!-- End Of Stories -->
-      <form class="create-post">
-        <div class="profile-photo">
-          <img src="./assets/images/profile-1.jpg" alt="" />
-        </div>
-        <input
-          type="text"
-          id="create-post"
-          placeholder="What's on your mind, Diana?"
-        />
-        <input type="submit" value="Post" class="btn btn-primary" />
-      </form>
-
-      <!-- feeds -->
-      <div class="feeds">
-        <ng-container *ngFor="let post of posts">
-          <app-post [post]="post"></app-post>
-        </ng-container>
-      </div>
-    </div>
-    <!-- End od Middle Section -->
-
-    <!-- Right Section -->
-    <div class="right scrollable">
-      <app-message-sidebar></app-message-sidebar>
-      <div class="friend-requests">
-        <h4>Requests</h4>
-        <app-friend-request
-          *ngFor="let friendRequest of friendRequests"
-          [request]="friendRequest"
-        >
-        </app-friend-request>
-      </div>
-    </div>
-    <!-- End of Right Section -->
+<!-- Start Of Stories -->
+<div class="stories scrollable">
+  <app-story *ngFor="let story of stories" [story]="story"></app-story>
+</div>
+<!-- End Of Stories -->
+<form class="create-post">
+  <div class="profile-photo">
+    <img src="./assets/images/profile-1.jpg" alt="" />
   </div>
-</main>
+  <input
+    type="text"
+    id="create-post"
+    placeholder="What's on your mind, Diana?"
+  />
+  <input type="submit" value="Post" class="btn btn-primary" />
+</form>
+
+<!-- feeds -->
+<div class="feeds">
+  <ng-container *ngFor="let post of posts">
+    <app-post [post]="post"></app-post>
+  </ng-container>
+</div>
+
 <!-- End of main section -->
 <div class="customize-theme">
   <div class="card">
@@ -100,5 +72,3 @@
     </div>
   </div>
 </div>
-
-<script src="script.js"></script>

@@ -1,43 +1,4 @@
-/* Main Section */
-main {
-    position: relative;
-    top: 4.4rem;
-    height: calc(100vh - 5.4rem);
-    /* Adjust height to account for the fixed navbar */
-}
-
-main .container {
-    width: 85%;
-    display: grid;
-    grid-template-columns: 18vw auto 22vw;
-    position: relative;
-    height: 100%;
-    /* Ensure container takes up the full height */
-}
-
-/* LEFT */
-.left {
-    height: max-content;
-    position: sticky;
-    top: var(--sticky-top-left);
-    margin-top: 1rem;
-    /* height: 100%; */
-    /* overflow-y: auto; Enable scrolling if content overflows */
-}
-
-/* MIDDLE */
-main .container .middle {
-    height: 100%;
-    overflow-y: auto;
-    /* Enable scrolling if content overflows */
-    padding: 1rem;
-}
-
-main .container .middle::-webkit-scrollbar {
-    display: none;
-}
-
-main .middle .stories {
+.stories {
     display: grid;
     grid-auto-flow: column;
     /* Ensure items flow in a single row */
@@ -56,7 +17,7 @@ main .middle .stories {
 
 /* ========== Create Post ========== */
 
-.middle .create-post {
+.create-post {
     width: 100%;
     display: flex;
     align-items: center;
@@ -67,37 +28,10 @@ main .middle .stories {
     border-radius: var(--border-radius);
 }
 
-.middle .create-post input[type="text"] {
+.create-post input[type="text"] {
     justify-self: start;
     width: 100%;
     background: transparent;
     color: var(--color-dark);
     margin-left: 1rem;
-}
-
-/* ========= RIGHT ========== */
-
-.container .right {
-    position: sticky;
-    /* top: 0; */
-    top: var(--sticky-top-right);
-    bottom: 0;
-    height: 100%;
-    overflow-y: auto;
-    /*Enable scrolling if content overflows*/
-    padding: 1rem;
-}
-
-.container .right:hover::-webkit-scrollbar {
-    display: block;
-}
-
-/* friend request */
-.container .right .friend-requests {
-    margin-top: 1rem;
-}
-
-.container .right .friend-requests h4 {
-    color: var(--color-gray);
-    margin: 1rem 0;
 }
