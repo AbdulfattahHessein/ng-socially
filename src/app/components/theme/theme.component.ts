@@ -9,7 +9,10 @@ import { ThemeService } from 'src/app/services/theme.service';
 export class ThemeComponent implements OnInit {
   themeService = inject(ThemeService);
 
-  constructor() {}
+  constructor() {
+    console.log(this.themeService.colors);
+    
+  }
 
   ngOnInit() {}
 }
