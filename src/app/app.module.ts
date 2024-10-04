@@ -11,6 +11,8 @@ import { PostComponent } from './components/post/post.component';
 import { MessageSidebarComponent } from './components/message-sidebar/message-sidebar.component';
 import { ChatCardComponent } from './components/chat-card/chat-card.component';
 import { FriendRequestComponent } from './components/friend-request/friend-request.component';
+import { FriendsRequestsListComponent } from './components/friends-requests-list/friends-requests-list.component';
+import { ThemeComponent } from './components/theme/theme.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FriendRequestComponent } from './components/friend-request/friend-reque
     PostComponent,
     MessageSidebarComponent,
     ChatCardComponent,
-    FriendRequestComponent
+    FriendRequestComponent,
+    FriendsRequestsListComponent,
+    ThemeComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],

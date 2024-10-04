@@ -17,15 +17,11 @@
     <!-- Right Section -->
     <div class="right scrollable">
       <app-message-sidebar></app-message-sidebar>
-      <div class="friend-requests">
-        <h4>Requests</h4>
-        <app-friend-request
-          *ngFor="let friendRequest of friendRequests"
-          [request]="friendRequest"
-        >
-        </app-friend-request>
-      </div>
+      <app-friends-requests-list></app-friends-requests-list>
     </div>
     <!-- End of Right Section -->
   </div>
 </main>
+<!-- End of main section -->
+
+<app-theme></app-theme>

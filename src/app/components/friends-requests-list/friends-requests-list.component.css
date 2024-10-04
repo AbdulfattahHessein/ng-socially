@@ -1,0 +1,9 @@
+/* friend request */
+.friend-requests {
+    margin-top: 1rem;
+}
+
+.friend-requests h4 {
+    color: var(--color-gray);
+    margin: 1rem 0;
+}

@@ -53,13 +53,3 @@ main {
 .container .right:hover::-webkit-scrollbar {
     display: block;
 }
-
-/* friend request */
-.container .right .friend-requests {
-    margin-top: 1rem;
-}
-
-.container .right .friend-requests h4 {
-    color: var(--color-gray);
-    margin: 1rem 0;
-}
