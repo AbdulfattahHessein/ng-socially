@@ -1,6 +1,6 @@
-<div class="customize-theme" (click)="themeService.close()">
-  <!-- [style.display]="themeService.isOpened ? 'grid' : 'none'" -->
+<div class="customize-theme" [style.display]="themeService.isOpened ? 'grid' : 'none'">
   <div class="card">
+    <i class="uil uil-multiply close-icon" (click)="themeService.close()"></i>
     <h2>customize your view</h2>
     <p class="text-muted">Manage your font size, color, and background</p>
 
@@ -35,18 +35,17 @@
     <div class="background">
       <h4>background</h4>
       <div class="choose-bg">
-        <div class="bg-1 active">
-          <span></span>
-          <h5 for="bg-1">Light</h5>
-        </div>
-        <div class="bg-2">
-          <span></span>
-          <h5 for="bg-2">Dim</h5>
-        </div>
-        <div class="bg-3">
-          <span></span>
-          <h5 for="bg-3">Lights out</h5>
-        </div>
+        <ng-container *ngFor="let bg of themeService.bgColors; let i = index">
+          <div
+            class="bg-{{ i + 1 }}"
+            [class.active]="themeService.selectedBgColor === bg"
+            [style.background]="bg.hsl"
+            (click)="themeService.changeBGColor(bg)"
+          >
+            <span></span>
+            <h5 for="bg-1">{{ bg.name }}</h5>
+          </div>
+        </ng-container>
       </div>
     </div>
   </div>

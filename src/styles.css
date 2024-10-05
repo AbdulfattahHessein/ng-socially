@@ -101,7 +101,6 @@ img {
 }
 
 /* MEDIA QUERIES For Small Laptops and Big Tablets */
-
 @media screen and (max-width: 1200px) {
     main .container {
         grid-template-columns: 5rem auto 31vw;

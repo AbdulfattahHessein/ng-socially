@@ -1,3 +1,4 @@
+import { BGColor } from '../enums/background-color.enum';
 import { ColorHue } from './../enums/color.enum';
 import { Injectable } from '@angular/core';
 
@@ -5,6 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ThemeService {
+  root = document.querySelector<HTMLElement>(':root');
   private _visible = false;
   get isOpened() {
     return this._visible;
@@ -40,18 +42,16 @@ export class ThemeService {
         name: ColorHue[+color],
         value: +color,
       }));
-
   }
   get selectedColor() {
     return this._selectedColor;
   }
   changeColor(color: ColorHue) {
     console.log(color);
-    
+
     this._selectedColor = color;
-    const root = document.querySelector<HTMLBRElement>(':root');
-    if (root) {
-      root.style.setProperty('--primary-color-hue', color.toString());
+    if (this.root) {
+      this.root.style.setProperty('--primary-color-hue', color.toString());
     }
   }
 
@@ -60,6 +60,59 @@ export class ThemeService {
     const htmlElement = document.querySelector('html');
     if (htmlElement) {
       htmlElement.style.fontSize = this._fonts[size];
+    }
+  }
+
+  readonly bgColors: BGColor[] = [
+    {
+      name: 'Light',
+      hsl: 'hsl(0, 0%, 100%)',
+      lightness: {
+        light: 95,
+        white: 100,
+        dark: 17,
+      },
+    },
+    {
+      name: 'Dark',
+      hsl: 'hsl(252, 30%, 17%)',
+      lightness: {
+        light: 15,
+        white: 20,
+        dark: 95,
+      },
+    },
+    {
+      name: 'Black',
+      hsl: 'hsl(252, 30%, 10%)',
+      lightness: {
+        light: 0,
+        white: 10,
+        dark: 95,
+      },
+    },
+  ];
+
+  private _selectedBgColor = this.bgColors[0];
+  get selectedBgColor() {
+    return this._selectedBgColor;
+  }
+
+  changeBGColor(bgColor: BGColor) {
+    this._selectedBgColor = bgColor;
+    if (this.root) {
+      this.root.style.setProperty(
+        '--light-color-lightness',
+        `${bgColor.lightness.light}%`
+      );
+      this.root.style.setProperty(
+        '--white-color-lightness',
+        `${bgColor.lightness.white}%`
+      );
+      this.root.style.setProperty(
+        '--dark-color-lightness',
+        `${bgColor.lightness.dark}%`
+      );
     }
   }
 
