@@ -1,4 +1,4 @@
-.message {
+:host {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1rem;
@@ -6,20 +6,20 @@
     align-items: flex-start;
 }
 
-.message p {
+p {
     font-size: 0.8rem;
 }
 
-.message .profile-photo {
+.profile-photo {
     position: relative;
     overflow: visible;
 }
 
-.message .profile-photo img {
+.profile-photo img {
     border-radius: 50%;
 }
 
-.message .profile-photo .active {
+.profile-photo .active {
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 50%;
@@ -30,29 +30,29 @@
     right: 0;
 }
 
-.message .chat-card-header {
+.chat-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* .message .message-body {
+/* .message-body {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-.message .message-body h5 {
+.message-body h5 {
   font-size: 0.85rem;
   font-weight: 500;
 }
 
-.message .message-body p {
+.message-body p {
   font-size: 0.75rem;
   color: var(--color-gray);
 }
 
-.message .message-body .message-time {
+.message-body .message-time {
   font-size: 0.65rem;
   color: var(--color-gray);
 } */

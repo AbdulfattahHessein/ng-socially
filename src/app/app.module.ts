@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home.component';
-import { StoryComponent } from './components/story/story.component';
-import { PostComponent } from './components/post/post.component';
+import { StoryComponent } from './components/home/story/story.component';
+import { PostComponent } from './components/home/post/post.component';
 import { MessageSidebarComponent } from './components/message-sidebar/message-sidebar.component';
-import { ChatCardComponent } from './components/chat-card/chat-card.component';
-import { FriendRequestComponent } from './components/friend-request/friend-request.component';
+import { ChatCardComponent } from './components/message-sidebar/chat-card/chat-card.component';
+import { FriendRequestComponent } from './components/friends-requests-list/friend-request/friend-request.component';
 import { FriendsRequestsListComponent } from './components/friends-requests-list/friends-requests-list.component';
 import { ThemeComponent } from './components/theme/theme.component';
 

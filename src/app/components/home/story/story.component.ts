@@ -7,10 +7,12 @@ import { Story } from 'src/app/models/story.model';
   styleUrls: ['./story.component.css'],
 })
 export class StoryComponent implements OnInit {
- 
   @Input({ required: true })
   story!: Story;
   constructor() {}
 
+  get background() {
+    return `url(${this.story.profilePhoto}) no-repeat center center/cover`;
+  }
   ngOnInit() {}
 }

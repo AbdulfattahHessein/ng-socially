@@ -1,0 +1,37 @@
+<div class="profile-photo">
+  <img [src]="ChatCard.userPhoto" alt="" />
+  <div class="active" *ngIf="ChatCard.isUserActive"></div>
+</div>
+<div class="message-body">
+  <div class="chat-card-header">
+    <h5>{{ ChatCard.username }}</h5>
+    <p
+      [ngClass]="{
+        'text-bold': ChatCard.isChatRead,
+        'text-muted': !ChatCard.isChatRead
+      }"
+    >
+      {{
+        ChatCard.time
+          | date : (isToday(ChatCard.time) ? "shortTime" : "mediumDate")
+      }}
+    </p>
+  </div>
+  <p
+    [ngClass]="{
+      'text-bold': ChatCard.isChatRead,
+      'text-muted': !ChatCard.isChatRead
+    }"
+  >
+    {{
+      ChatCard.messagesCount > 1
+        ? ChatCard.messagesCount + " new messages"
+        : ChatCard.lastMessage
+    }}
+  </p>
+  <!-- <p class="text-muted">
+      {{
+        ChatCard.time | date : (isToday(ChatCard.time) ? "shortTime" : "mediumDate")
+      }}
+    </p> -->
+</div>

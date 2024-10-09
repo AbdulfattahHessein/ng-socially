@@ -1,0 +1,44 @@
+<div class="head">
+  <div class="user">
+    <div class="profile-photo">
+      <img [src]="post.user.photo" alt="" />
+    </div>
+    <div class="info">
+      <h3>{{ post.user.username }}</h3>
+      <small>{{ post.date | date : "dd, MMMM yyyy, HH:mm" }}</small>
+    </div>
+  </div>
+  <span class="edit">
+    <i class="uil uil-ellipsis-h"></i>
+  </span>
+</div>
+
+<div class="photo">
+  <img [src]="post.image" alt="" />
+</div>
+
+<div class="action-buttons">
+  <div class="interaction-buttons">
+    <span><i class="uil uil-heart"></i></span>
+    <span><i class="uil uil-comment-dots"></i></span>
+    <span><i class="uil uil-share-alt"></i></span>
+  </div>
+  <div class="bookmark">
+    <span><i class="uil uil-bookmark-full"></i></span>
+  </div>
+</div>
+<div class="liked-by">
+  <p>
+    Liked by <b>{{ post.likes[0].username }}</b> and
+    <b>{{ post.likes.length - 1 }} others</b>
+  </p>
+</div>
+<div class="caption">
+  <p>
+    <b>{{ post.user.username }}</b> {{ post.caption }}
+    <span class="hashtag">#lifestyle</span>
+  </p>
+</div>
+<div class="comments text-muted">
+  View all {{ post.commentsCount }} comments
+</div>

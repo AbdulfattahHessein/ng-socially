@@ -1,4 +1,5 @@
-.feed {
+:host {
+    display: block;
     background: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
@@ -7,24 +8,24 @@
     line-height: 1.5;
 }
 
-.feed .head {
+:host .head {
     display: flex;
     justify-content: space-between;
 }
 
-.feed .user {
+:host .user {
     display: flex;
     gap: 1rem;
 }
 
-.feed .photo {
+:host .photo {
     border-radius: var(--card-border-radius);
     overflow: hidden;
     margin: 0.7rem 0;
     /* height: 15rem; */
 }
 
-.feed .action-buttons {
+:host .action-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;

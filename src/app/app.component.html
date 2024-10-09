@@ -1,27 +1,25 @@
-<app-header></app-header>
+<app-header />
 <!-- main section -->
 <main>
   <div class="container">
     <!-- Left section -->
-    <div class="left">
-      <app-sidebar></app-sidebar>
-    </div>
+    <app-sidebar class="left" />
     <!-- End of Left Section -->
 
     <!-- Middle Section -->
     <div class="middle">
-      <router-outlet></router-outlet>
+      <router-outlet />
     </div>
     <!-- End od Middle Section -->
 
     <!-- Right Section -->
     <div class="right scrollable">
-      <app-message-sidebar></app-message-sidebar>
-      <app-friends-requests-list></app-friends-requests-list>
+      <app-message-sidebar />
+      <app-friends-requests-list />
     </div>
     <!-- End of Right Section -->
   </div>
 </main>
 <!-- End of main section -->
 
-<app-theme></app-theme>
+<app-theme />
