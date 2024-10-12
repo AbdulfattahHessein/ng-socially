@@ -1,0 +1,27 @@
+:host {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+:host:hover {
+    opacity: 0.8;
+}
+
+:host /deep/ * {
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ::ng-deep * {
+    color: black;
+    cursor: inherit;
+    background: inherit;
+} */

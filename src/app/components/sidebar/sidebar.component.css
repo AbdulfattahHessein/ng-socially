@@ -83,7 +83,7 @@
     overflow: hidden;
 }
 
-.btn {
+#create-post-btn {
     margin-top: 1rem;
     width: 100%;
     text-align: center;

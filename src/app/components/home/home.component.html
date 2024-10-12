@@ -12,7 +12,17 @@
     id="create-post"
     placeholder="What's on your mind, Diana?"
   />
-  <input type="submit" value="Post" class="btn btn-primary" />
+  <app-button>
+    <input
+      type="submit"
+      value="Post"
+    />
+    <!-- 
+     ngProjectAs="[button]"
+     button
+     you can use any of them to project content using select
+     -->
+  </app-button>
 </form>
 
 <!-- feeds -->

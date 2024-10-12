@@ -73,7 +73,7 @@ img {
     width: 100%;
 }
 
-.btn {
+/* .btn {
     display: inline-block;
     padding: var(--btn-padding);
     font-weight: 500;
@@ -81,16 +81,16 @@ img {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.9rem;
-}
+} */
 
-.btn:hover {
+/* .btn:hover {
     opacity: 0.8;
-}
+} */
 
-.btn-primary {
+/* .btn-primary {
     background-color: var(--color-primary);
     color: var(--color-white);
-}
+} */
 
 .text-bold {
     font-weight: 500;
