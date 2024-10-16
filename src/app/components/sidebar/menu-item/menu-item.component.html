@@ -1,0 +1,14 @@
+<span>
+  <i
+    *ngIf="icon"
+    [class]="icon"
+    [style.color]="active ? 'var(--color-primary)' : 'var(--color-gray)'"
+  >
+    <small *ngIf="notificationCount" class="notifications-count">{{
+      notificationCount > 9 ? "9+" : notificationCount
+    }}</small>
+  </i>
+</span>
+<h3><ng-content></ng-content></h3>
+
+<ng-content select="[notifications]"></ng-content>

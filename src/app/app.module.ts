@@ -13,6 +13,9 @@ import { ChatCardComponent } from './components/message-sidebar/chat-card/chat-c
 import { FriendRequestComponent } from './components/friends-requests-list/friend-request/friend-request.component';
 import { FriendsRequestsListComponent } from './components/friends-requests-list/friends-requests-list.component';
 import { ThemeComponent } from './components/theme/theme.component';
+import { MenuItemComponent } from './components/sidebar/menu-item/menu-item.component';
+import { NotificationsPopupComponent } from './components/sidebar/notifications-popup/notifications-popup.component';
+import { ProfileCardComponent } from './components/sidebar/profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { ThemeComponent } from './components/theme/theme.component';
     ChatCardComponent,
     FriendRequestComponent,
     FriendsRequestsListComponent,
-    ThemeComponent
+    ThemeComponent,
+    MenuItemComponent,
+    NotificationsPopupComponent,
+    ProfileCardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],
