@@ -1,6 +1,6 @@
 <div class="friend-requests">
   <h4>Requests</h4>
-  <ng-container *ngFor="let friendRequest of friendRequests">
+  <ng-container *ngFor="let friendRequest of friendRequests$ | async">
     <app-friend-request [request]="friendRequest"></app-friend-request>
   </ng-container>
 </div>

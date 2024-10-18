@@ -16,6 +16,6 @@
 </div>
 <!-- message -->
 <app-chat-card
-  *ngFor="let chatCard of ChatsCards"
+  *ngFor="let chatCard of chatsCards$ | async"
   [ChatCard]="chatCard"
 ></app-chat-card>

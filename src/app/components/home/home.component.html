@@ -1,6 +1,6 @@
 <!-- Start Of Stories -->
 <div class="stories scrollable">
-  <app-story *ngFor="let story of stories" [story]="story"></app-story>
+  <app-story *ngFor="let story of stories$ | async" [story]="story"></app-story>
 </div>
 <!-- End Of Stories -->
 <form class="create-post">
@@ -13,10 +13,7 @@
     placeholder="What's on your mind, Diana?"
   />
   <app-button>
-    <input
-      type="submit"
-      value="Post"
-    />
+    <input type="submit" value="Post" />
     <!-- 
      ngProjectAs="[button]"
      button
@@ -27,7 +24,7 @@
 
 <!-- feeds -->
 <div class="feeds">
-  <ng-container *ngFor="let post of posts">
+  <ng-container *ngFor="let post of posts$ | async">
     <app-post [post]="post"></app-post>
   </ng-container>
 </div>
