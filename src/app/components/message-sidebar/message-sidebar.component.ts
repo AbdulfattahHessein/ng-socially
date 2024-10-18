@@ -8,9 +8,12 @@ import { ChatCard } from 'src/app/models/message-item.model';
   styleUrls: ['./message-sidebar.component.css'],
 })
 export class MessageSidebarComponent implements OnInit {
+  searchValue: string = '';
   chatsService = inject(ChatsService);
   chatsCards$ = this.chatsService.getAllChatsCards();
-
+  OnSearch() {
+    this.chatsCards$ = this.chatsService.search(this.searchValue);
+  }
   constructor() {}
 
   ngOnInit() {}

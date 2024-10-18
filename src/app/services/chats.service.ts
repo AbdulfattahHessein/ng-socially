@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ChatCard } from '../models/message-item.model';
-import { of } from 'rxjs';
+import { map, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -47,6 +47,18 @@ export class ChatsService {
 
   getAllChatsCards() {
     return this.chatsCards$;
+  }
+
+  search(value: string) {
+    return this.getAllChatsCards().pipe(
+      map((chats) =>
+        chats.filter(
+          (chat) =>
+            chat.username.toLowerCase().includes(value) ||
+            chat.lastMessage.toLowerCase().includes(value)
+        )
+      )
+    );
   }
 
   constructor() {}

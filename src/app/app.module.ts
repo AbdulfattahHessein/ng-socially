@@ -16,6 +16,7 @@ import { ThemeComponent } from './components/theme/theme.component';
 import { MenuItemComponent } from './components/sidebar/menu-item/menu-item.component';
 import { NotificationsPopupComponent } from './components/sidebar/notifications-popup/notifications-popup.component';
 import { ProfileCardComponent } from './components/sidebar/profile-card/profile-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { ProfileCardComponent } from './components/sidebar/profile-card/profile-
     NotificationsPopupComponent,
     ProfileCardComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

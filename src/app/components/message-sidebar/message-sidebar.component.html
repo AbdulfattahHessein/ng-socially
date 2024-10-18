@@ -5,7 +5,13 @@
 <!-- search bar -->
 <div class="search-bar">
   <i class="uil uil-search"></i>
-  <input type="search" placeholder="Search messages..." id="message-search" />
+  <input
+    type="search"
+    placeholder="Search messages..."
+    id="message-search"
+    [(ngModel)]="searchValue"
+    (input)="OnSearch()"
+  />
 </div>
 
 <!-- category -->
