@@ -1,3 +1,4 @@
+import { DatePipe, NgClass, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ChatCard } from 'src/app/models/message-item.model';
 
@@ -5,11 +6,13 @@ import { ChatCard } from 'src/app/models/message-item.model';
   selector: 'app-chat-card',
   templateUrl: './chat-card.component.html',
   styleUrls: ['./chat-card.component.css'],
+  standalone: true,
+  imports: [NgIf, NgClass, DatePipe],
 })
 export class ChatCardComponent implements OnInit {
   @Input({ required: true })
   ChatCard!: ChatCard;
-  constructor() { }
+  constructor() {}
   isToday(date: Date) {
     const today = new Date();
     return (

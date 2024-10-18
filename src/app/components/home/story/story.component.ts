@@ -5,6 +5,7 @@ import { Story } from 'src/app/models/story.model';
   selector: 'app-story',
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.css'],
+  standalone: true,
 })
 export class StoryComponent implements OnInit {
   @Input({ required: true })

@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -12,6 +13,8 @@ import {
   selector: 'a[appMenuItem]',
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css'],
+  standalone: true,
+  imports: [NgIf],
   host: {
     class: 'menu-item',
   },

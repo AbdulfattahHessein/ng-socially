@@ -1,3 +1,4 @@
+import { DatePipe, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Notification } from 'src/app/models/notification.model';
 
@@ -5,6 +6,8 @@ import { Notification } from 'src/app/models/notification.model';
   selector: 'app-notifications-popup',
   templateUrl: './notifications-popup.component.html',
   styleUrls: ['./notifications-popup.component.css'],
+  standalone: true,
+  imports: [NgFor, DatePipe],
   host: {
     class: 'notifications-popup scrollable',
   },
