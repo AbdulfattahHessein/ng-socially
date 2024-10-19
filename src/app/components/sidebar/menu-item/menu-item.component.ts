@@ -19,14 +19,17 @@ import {
     class: 'menu-item',
   },
 })
-export class MenuItemComponent implements OnInit, OnChanges {
+export class MenuItemComponent implements OnInit {
   @Input() icon?: string;
-  @Input() active: boolean = false;
   hostElement = inject<ElementRef<HTMLElement>>(ElementRef);
   @Input() notificationCount = 0;
-  ngOnChanges(changes: SimpleChanges): void {
-    this.hostElement.nativeElement.classList.toggle('active', this.active);
-  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    const icon = document.querySelector('i');
+    if (icon) {
+      icon.style.color = icon.classList.contains('active')
+        ? 'var(--color-primary)'
+        : 'var(--color-gray)';
+    }
+  }
 }

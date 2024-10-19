@@ -19,7 +19,6 @@ h3 {
 i {
     font-size: 1.4rem;
     color: var(--color-gray);
-    /* color: inherit; */
     margin-left: 1.5rem;
     position: relative;
 }
@@ -36,7 +35,7 @@ i {
     right: -0.1rem;
 }
 
-:host.active {
+/* :host.active {
     background: var(--color-light);
     color: var(--color-primary);
 }
@@ -48,4 +47,4 @@ i {
     height: 100%;
     position: absolute;
     background: var(--color-primary);
-}
+} */

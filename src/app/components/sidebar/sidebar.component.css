@@ -35,3 +35,17 @@
     border-radius: 0.1rem;
     display: none;
 }
+
+.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+}
+
+.active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background: var(--color-primary);
+}

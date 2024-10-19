@@ -23,6 +23,10 @@
     margin-bottom: 1rem;
 }
 
+.notification-body {
+    color: var(--color-dark);
+}
+
 .profile-photo {
     width: 3rem;
     height: 3rem;

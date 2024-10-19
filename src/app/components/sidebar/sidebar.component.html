@@ -1,15 +1,16 @@
 <app-profile-card />
 <div class="sidebar">
-  <a appMenuItem icon="uil uil-home" [active]="false"> Home </a>
-  <a appMenuItem icon="uil uil-compass" [active]="true"> Explore </a>
+  <a appMenuItem icon="uil uil-home" class="active"> Home </a>
+  <a appMenuItem icon="uil uil-compass"> Explore </a>
   <a
     id="notifications"
     appMenuItem
     icon="uil uil-bell"
     [notificationCount]="15"
+    (click)="NPopupClosed = !NPopupClosed"
   >
     Notifications
-    <app-notifications-popup notifications />
+    <app-notifications-popup notifications [hidden]="NPopupClosed" />
   </a>
   <a
     id="messages-notification"
