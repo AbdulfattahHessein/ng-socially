@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FriendRequest } from 'src/app/models/friend-request.model';
-import { ButtonComponent } from "../../../modules/shared/components/button/button.component";
+import { ButtonComponent } from '../../../modules/shared/components/button/button.component';
 import { NgIf } from '@angular/common';
 
 @Component({
@@ -8,7 +8,7 @@ import { NgIf } from '@angular/common';
   templateUrl: './friend-request.component.html',
   styleUrls: ['./friend-request.component.css'],
   standalone: true,
-  imports: [ButtonComponent, NgIf]
+  imports: [ButtonComponent, NgIf],
 })
 export class FriendRequestComponent implements OnInit {
   @Input({ required: true })
@@ -16,4 +16,8 @@ export class FriendRequestComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onAccept() {
+    this.request.isAccepted = true;
+  }
 }
