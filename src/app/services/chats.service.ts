@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ChatCard } from '../models/message-item.model';
-import { map, of } from 'rxjs';
+import { map, of, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -44,6 +44,14 @@ export class ChatsService {
       isChatRead: true,
     },
   ]);
+
+  private readonly _messagesHighlight$ = new Subject<void>();
+
+  readonly messagesHighlight$ = this._messagesHighlight$.asObservable();
+
+  highlightMessagesSidebar() {
+    this._messagesHighlight$.next();
+  }
 
   getAllChatsCards() {
     return this.chatsCards$;

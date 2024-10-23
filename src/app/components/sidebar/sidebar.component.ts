@@ -4,6 +4,7 @@ import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { NotificationsPopupComponent } from './notifications-popup/notifications-popup.component';
 import { ButtonComponent } from '../../modules/shared/components/button/button.component';
+import { ChatsService } from 'src/app/services/chats.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,6 +19,9 @@ import { ButtonComponent } from '../../modules/shared/components/button/button.c
   ],
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
+  OnMessagesClicked() {
+    this.chatsService.highlightMessagesSidebar();
+  }
   NPopupClosed = true;
   openThemeModal() {
     this.themeService.open();
@@ -25,6 +29,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   themeService = inject(ThemeService);
+  chatsService = inject(ChatsService);
 
   constructor() {}
   ngAfterViewInit(): void {
