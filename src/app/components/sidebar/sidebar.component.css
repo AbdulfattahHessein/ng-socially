@@ -1,51 +1,68 @@
 /* sidebar */
 
 .sidebar {
-    margin-top: 1rem;
-    background: var(--color-white);
-    border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
 }
 
 .sidebar a[appMenuItem]:first-child.active {
-    border-top-left-radius: var(--card-border-radius);
-    overflow: hidden;
+  border-top-left-radius: var(--card-border-radius);
+  overflow: hidden;
 }
 
 .sidebar a[appMenuItem]:last-child.active {
-    border-bottom-left-radius: var(--card-border-radius);
-    overflow: hidden;
+  border-bottom-left-radius: var(--card-border-radius);
+  overflow: hidden;
 }
 
 #create-post-btn {
-    margin-top: 1rem;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 #notifications::after {
-    content: "";
-    width: 1.2rem;
-    height: 1.2rem;
-    display: block;
-    background: var(--color-white);
-    position: absolute;
-    right: -2.5rem;
-    transform: rotate(45deg);
-    border-radius: 0.1rem;
-    display: none;
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  background: var(--color-white);
+  position: absolute;
+  right: -2.5rem;
+  transform: rotate(45deg);
+  border-radius: 0.1rem;
+  display: none;
 }
 
 .active {
-    background: var(--color-light);
-    color: var(--color-primary);
+  background: var(--color-light);
+  color: var(--color-primary);
 }
 
 .active::before {
-    content: "";
-    display: block;
-    width: 0.5rem;
-    height: 100%;
-    position: absolute;
-    background: var(--color-primary);
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  background: var(--color-primary);
+}
+
+@media screen and (max-width: 1200px) {
+  #create-post-btn {
+    display: none;
+  }
+
+  .sidebar {
+    margin-top: 0;
+    h3 {
+      display: none;
+    }
+  }
+
+  #notifications::after {
+    right: -2rem;
+  }
 }

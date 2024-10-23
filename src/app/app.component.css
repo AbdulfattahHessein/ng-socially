@@ -1,55 +1,110 @@
 /* Main Section */
 main {
-    position: relative;
-    top: 4.4rem;
-    height: calc(100vh - 5.4rem);
-    /* Adjust height to account for the fixed navbar */
+  position: relative;
+  top: 4.4rem;
+  height: calc(100vh - 5.4rem);
+  /* Adjust height to account for the fixed navbar */
 }
 
 .container {
-    width: 85%;
-    display: grid;
-    grid-template-columns: 18vw auto 22vw;
-    position: relative;
-    height: 100%;
-    /* Ensure container takes up the full height */
+  width: 88%;
+  display: grid;
+  grid-template-columns: 18vw auto 23vw;
+  position: relative;
+  height: 100%; /* Ensure container takes up the full height */
 }
 
 /* LEFT */
 .left {
-    height: max-content;
-    position: sticky;
-    top: var(--sticky-top-left);
-    margin-top: 1rem;
-    /* height: 100%; */
-    /* overflow-y: auto; Enable scrolling if content overflows */
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-left);
+  margin-top: 1rem;
+  /* height: 100%; */
+  /* overflow-y: auto; Enable scrolling if content overflows */
 }
 
 /* MIDDLE */
 .middle {
-    height: 100%;
-    overflow-y: auto;
-    /* Enable scrolling if content overflows */
-    padding: 1rem;
+  height: 100%;
+  overflow-y: auto;
+  /* Enable scrolling if content overflows */
+  padding: 1rem;
 }
 
 .middle::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* ========= RIGHT ========== */
 
 .container .right {
-    position: sticky;
-    /* top: 0; */
-    top: var(--sticky-top-right);
-    bottom: 0;
-    height: 100%;
-    overflow-y: auto;
-    /*Enable scrolling if content overflows*/
-    padding: 1rem;
+  position: sticky;
+  /* top: 0; */
+  top: var(--sticky-top-right);
+  bottom: 0;
+  height: 100%;
+  overflow-y: auto;
+  /*Enable scrolling if content overflows*/
+  padding: 1rem;
 }
 
 .container .right:hover::-webkit-scrollbar {
-    display: block;
+  display: block;
+}
+
+/* MEDIA QUERIES For Small Laptops and Big Tablets */
+@media screen and (max-width: 1200px) {
+  main {
+    .container {
+      grid-template-columns: 5rem auto 31vw;
+      gap: 0;
+      width: 95%;
+      .left {
+        width: 5rem;
+        z-index: 5;
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES For Small Tablets And Mobile phones */
+@media screen and (max-width: 992px) {
+  main .container {
+    grid-template-columns: 0 auto 4rem;
+    .left {
+      grid-column: 3/4;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    .middle {
+      grid-column: 1/3;
+    }
+    .right {
+      display: none;
+    }
+  }
+}
+
+/* ========= MEDIA QUERIES FOR MOBILE PHONES ========= */
+@media screen and (max-width: 600px) {
+  main .container {
+    width: 90%;
+    grid-template-columns: 0 100% 0;
+    .middle {
+      padding: 0;
+      .stories {
+        margin-top: 1rem;
+      }
+    }
+    .left {
+      right: -4.5rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        right: 0;
+      }
+    }
+  }
 }
