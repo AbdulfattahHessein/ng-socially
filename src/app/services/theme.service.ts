@@ -23,7 +23,7 @@ export class ThemeService {
     2: '13px',
     3: '16px',
     4: '19px',
-    5: '22px',
+    // 5: '22px',
   };
 
   get fontsSizes() {
