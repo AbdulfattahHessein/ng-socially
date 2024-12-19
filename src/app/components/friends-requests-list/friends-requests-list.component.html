@@ -2,7 +2,7 @@
   <div class="friend-requests" [hidden]="allRequestsAccepted(friendRequests)">
     <h4>Requests</h4>
     <ng-container *ngFor="let friendRequest of friendRequests">
-      <app-friend-request [request]="friendRequest"></app-friend-request>
+      <app-friend-request [request]="friendRequest"/>
     </ng-container>
   </div>
 </ng-container>
